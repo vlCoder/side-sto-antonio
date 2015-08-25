@@ -1,0 +1,68 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase/
+rewriteCond %{HTTP_HOST} ^sidechacarasantoantonio.com.br [NC]
+rewriteRule ^(.*)$ http://www.sidechacarasantoantonio.com.br/$1 [L,R=301]
+#Força a utilizar Cache-Control e Expires header
+<FilesMatch "\.(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 SEMANA
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DIAS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>
+# 1 MINUTO
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=60, private, proxy-revalidate"
+</FilesMatch>
+
+
+# TIME CHEAT SHEET
+#      300   5 MIN
+#      600  10 MIN
+#      900  15 MIN
+#     1800  30 MIN
+#     2700  45 MIN
+#
+#     3600   1 HR
+#     7200   2 HR
+#    10800   3 HR
+#    14400   4 HR
+#    18000   5 HR
+#    36000  10 HR
+#    39600  11 HR
+#    43200  12 HR
+#    46800  13 HR
+#    50400  14 HR
+#    54000  15 HR
+#    86400  24 HR
+#
+#    86400   1 DAY
+#   172800   2 DAY
+#   259200   3 DAY
+#   345600   4 DAY
+#   432000   5 DAY
+#   518400   6 DAY
+#   604800   7 DAY
+#
+#   604800   1 WEEK
+#  1209600   2 WEEK
+#  1814400   3 WEEK
+#  2419200   4 WEEK
+#
+#  2419200   1 MONTH
+#  4838400   2 MONTH
+#  7257600   3 MONTH
+#  9676800   4 MONTH
+# 12096000   5 MONTH
+# 14515200   6 MONTH
+# 16934400   7 MONTH
+# 19353600   8 MONTH
+# 21772800   9 MONTH
+# 24192000  10 MONTH
+# 26611200  11 MONTH
+# 29030400  12 MONTH

@@ -1,0 +1,20 @@
+/* CODER */
+       
+Name: Vinicius Lopes de Camargo.
+Site: email, link to a contact form, etc.
+Twitter: @Vinny_LC.    
+Location: São Paulo, Brazil.
+For: Tiberio Contruções. 
+
+/* SITE */
+Last update: 07/05/2015
+Doctype: HTML5, CSS3
+ 
+Components: jQuery, Orbit, Reveal
+IDE: Sublime Text 3, Photoshop, Fireworks, Ilustrator
+Software: Sass
+
+
+
+/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+
